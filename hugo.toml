@@ -1,4 +1,45 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Project'
-theme = 'zen'
+baseURL = "https://semikolan.me/"
+languageCode = "en-us"
+title = "semikolan.me"
+theme = "zen"
+
+[params]
+  description = "Notes, links, and thoughts from a curious engineer."
+  sidebar = true
+  mobileMenu = true
+  submitted = true
+  logo = false
+  feedlinks = true
+  poweredby = true
+  footer = "This site is licensed under a [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license."
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 1
+  [[menu.main]]
+    name = "TIL"
+    url = "/til"
+    weight = 2
+  [[menu.main]]
+    name = "Misc"
+    url = "/misc"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 4
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "SearchIndex"]
+  section = ["HTML", "RSS", "JSON"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "search_index"
+    isPlainText = true
+    notAlternative = true
